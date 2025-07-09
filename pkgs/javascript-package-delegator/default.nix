@@ -9,22 +9,22 @@
 }:
 let
   shaMap = {
-    x86_64-linux = "0000000000000000000000000000000000000000000000000000";
-    aarch64-linux = "0000000000000000000000000000000000000000000000000000";
-    x86_64-darwin = "0000000000000000000000000000000000000000000000000000";
-    aarch64-darwin = "0000000000000000000000000000000000000000000000000000";
+    x86_64-linux = "sha256-dqaKdIDqfZVq2kHwA3FrUlVkAX828itLQrUNZvbUJs4=";
+    aarch64-linux = "sha256-FTgNYsutaTj82/XmauA56ww9TXQ6BiBZN6omYaPrLT8=";
+    x86_64-darwin = "sha256-4y8oezSulNe7vjxJY/NBgGaO+ZPJehuMkGiEfivBhEM=";
+    aarch64-darwin = "sha256-vjPjcQkA4IqQtUHa+DDta/yngeLOccAHZHDJZVL2WqY=";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.1.0-rc-1/javascript-package-delegator_1.1.0-rc-1_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.1.0-rc-1/javascript-package-delegator_1.1.0-rc-1_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.1.0-rc-1/javascript-package-delegator_1.1.0-rc-1_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.1.0-rc-1/javascript-package-delegator_1.1.0-rc-1_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.0/javascript-package-delegator_1.0.0_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.0/javascript-package-delegator_1.0.0_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.0/javascript-package-delegator_1.0.0_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.0/javascript-package-delegator_1.0.0_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "javascript-package-delegator";
-  version = "1.1.0-rc-1";
+  version = "1.0.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
