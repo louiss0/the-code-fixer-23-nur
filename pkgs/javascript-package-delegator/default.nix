@@ -9,22 +9,22 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "1kc35vwfh49cxymbxx3mm6ambsmp4bc26435ssr1cjyphp535y1r";
-    aarch64-linux = "08x7qrh2qfbpsarg4fi9fq6qx4404n2d7wavksh0cnk6gs0wj1cy";
-    x86_64-darwin = "110qv91nk66767hjgxkzyz68bcyfylspsb3yf5ik8cccjq5j6amk";
-    aarch64-darwin = "05gaxcjb3qcmn9p2hqy2ymnk7kc1g8by9manryklx12nbnvdcdg6";
+    x86_64-linux = "1gw29l8pxvh154mk57dsngwd2vpj8wnfzmmfsqfymwfvsrjfpy6f";
+    aarch64-linux = "0jdqyzvns5wrcqcll49q23p848dld8mw6w2hl3c1nhk8bwldc677";
+    x86_64-darwin = "11fnylpv9yp0vdr8ar80sjqxsgqqbkjb1ihipqrfm4mcyi09lahq";
+    aarch64-darwin = "1iaa7c5innjdyix6qm2q8hg6bim4lzdlrngbmjprcx0wq8d32i57";
   };
 
   urlMap = {
-    x86_64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.1/javascript-package-delegator_1.0.1_linux_amd64.tar.gz";
-    aarch64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.1/javascript-package-delegator_1.0.1_linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.1/javascript-package-delegator_1.0.1_darwin_amd64.tar.gz";
-    aarch64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.1/javascript-package-delegator_1.0.1_darwin_arm64.tar.gz";
+    x86_64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.3/javascript-package-delegator_1.0.3_linux_amd64.tar.gz";
+    aarch64-linux = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.3/javascript-package-delegator_1.0.3_linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.3/javascript-package-delegator_1.0.3_darwin_amd64.tar.gz";
+    aarch64-darwin = "https://github.com/louiss0/javascript-package-delegator/releases/download/v1.0.3/javascript-package-delegator_1.0.3_darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "javascript-package-delegator";
-  version = "1.0.1";
+  version = "1.0.3";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
