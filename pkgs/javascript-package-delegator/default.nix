@@ -9,10 +9,10 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    x86_64-linux = "1hjdhczi20vk21j338pdzlncj0fia1nhahlbbjx2gqk16skwfpgv";
-    aarch64-linux = "04p4rg8hg3ncqnvnkav02s0qla5qw68fi8w96x58g6jifhhzv35d";
-    x86_64-darwin = "0n2cps7xgby3m1pcdx4khfyyvymahbhw55wlcvsg93xz24pm9vrs";
-    aarch64-darwin = "1p7y935sshyyw81qq0i3dwkjv7c2pk69gpn8sw4xfyqn58sk9ag5";
+    x86_64-linux = "0l5agyfdn659hmi0v79jxa8islnnq2ayg5lhnigkj7r1fgdhnwj8";
+    aarch64-linux = "033c93gdcp4776a8rsmirqlh7lkl21j0il1iy6szfar7lrvc0j2a";
+    x86_64-darwin = "1rz1m31xpl3ndqq9r2w5p07gxn7vg6cy0vpizwp1z0qa71qawfjk";
+    aarch64-darwin = "06rwhsjlzjlmn0x46hv0scd7zl2yrm46zrzxgjh0rayk7yjdy058";
   };
 
   urlMap = {
@@ -42,7 +42,7 @@ stdenvNoCC.mkDerivation {
   system = system;
 
   meta = {
-    description = "A CLI for executing Javascript Package Manager Commands based on lock files. Supported's deno,bun, and all node package managers";
+    description = "A CLI for executing JavaScript package manager commands based on lock files. Supports npm, yarn, pnpm, bun, and deno.";
     homepage = "https://github.com/louiss0/javascript-package-delegator";
     license = lib.licenses.mit;
 
